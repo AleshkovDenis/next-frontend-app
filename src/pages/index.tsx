@@ -5,21 +5,27 @@ import {
   List,
   ListIcon,
   ListItem,
-} from '@chakra-ui/react'
-import { CheckCircleIcon, LinkIcon } from '@chakra-ui/icons'
+} from "@chakra-ui/react";
+import { CheckCircleIcon, LinkIcon } from "@chakra-ui/icons";
+import { Heading, Flex } from "@chakra-ui/react";
 
-import { Hero } from '../components/Hero'
-import { Container } from '../components/Container'
-import { Main } from '../components/Main'
-import { DarkModeSwitch } from '../components/DarkModeSwitch'
-import { CTA } from '../components/CTA'
-import { Footer } from '../components/Footer'
+import { Container } from "../components/Container";
+import { DarkModeSwitch } from "../components/DarkModeSwitch";
 
 const Index = () => (
   <Container height="100vh">
-    <Hero />
     <DarkModeSwitch />
+    <Flex
+      flexDirection="column"
+      justifyContent="center"
+      alignItems="center"
+      height="100vh"
+      bgGradient="linear(to-l, heroGradientStart, heroGradientEnd)"
+      bgClip="text"
+    >
+      <Heading fontSize="6vw">Welcome to app</Heading>
+    </Flex>
   </Container>
-)
+);
 
-export default Index
+export default Index;
