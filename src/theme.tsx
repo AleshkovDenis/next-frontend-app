@@ -24,6 +24,10 @@ const theme = extendTheme({
         default: '#FF0080',
         _dark: '#fbec8f',
       },
+      fa: {
+        default: '#FFF',
+        _dark: '#FFF',
+      }
     },
     radii: {
       button: '12px',
@@ -31,6 +35,10 @@ const theme = extendTheme({
   },
   colors: {
     black: '#16161D',
+    brand: {
+      100: "#f7fafc",
+      900: "#1a202c",
+    },
   },
   fonts,
   breakpoints,

@@ -1,3 +1,4 @@
+// @ts-check
 import {
   Link as ChakraLink,
   Text,
