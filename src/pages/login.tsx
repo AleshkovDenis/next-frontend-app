@@ -13,9 +13,18 @@ import {
   Text,
   useColorModeValue,
 } from "@chakra-ui/react";
-import { FaFacebook, FaTwitter, FaGoogle } from "react-icons/fa";
+import { FaFacebook, FaGithub, FaGoogle } from "react-icons/fa";
 
-export default function SimpleCard() {
+export default function Login() {
+  const google = () => {
+    window.open("http://localhost:5000/auth/google", "_self");
+  };
+  const github = () => {
+    window.open("http://localhost:5000/auth/github", "_self");
+  };
+  const facebook = () => {
+    window.open("http://localhost:5000/auth/facebook", "_self");
+  };
   return (
     <Flex
       minH={"100vh"}
@@ -63,13 +72,19 @@ export default function SimpleCard() {
               >
                 Sign in
               </Button>
-              <Button colorScheme="facebook" leftIcon={<FaFacebook />}>
+              <Button
+                colorScheme="facebook"
+                leftIcon={<FaFacebook />}
+                onClick={facebook}
+              >
                 Facebook
               </Button>
-              <Button colorScheme="twitter" leftIcon={<FaTwitter />}>
-                Twitter
+              <Button leftIcon={<FaGithub />} onClick={github}>
+                Github
               </Button>
-              <Button leftIcon={<FaGoogle />}>Google</Button>
+              <Button leftIcon={<FaGoogle />} onClick={google}>
+                Google
+              </Button>
             </Stack>
           </Stack>
         </Box>
